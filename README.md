@@ -4,21 +4,19 @@
 
 run the following command:
 
-$ docker build -t uncertainty_docker .
+    $ docker build -t uncertainty_docker .
 
 
 ## run docker
 
-$ docker run --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0 \
-    --rm \
-    -v <path-to-repo>/src:/root/asr-python/src \
-    -v <path-to-repo>/exp:/root/asr-python/exp \
-    -v <path-to-repo>/results:/root/asr-python/results \
-    -v <path-to-dataset>/TIDIGITS-ASE:/root/asr-python/TIDIGITS-ASE \
-    -it uncertainty_docker \
-    /bin/bash
-
-    python3 /root/asr-python/src/recognizer_torch.py 'NN'
+    $ docker run --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0 \
+        --rm \
+        -v <path-to-repo>/src:/root/asr-python/src \
+        -v <path-to-repo>/exp:/root/asr-python/exp \
+        -v <path-to-repo>/results:/root/asr-python/results \
+        -v <path-to-dataset>/TIDIGITS-ASE:/root/asr-python/TIDIGITS-ASE \
+        -it uncertainty_docker \
+        python3 /root/asr-python/src/recognizer_torch.py 'NN'
     
  Depending on the model use 'NN', 'dropout', 'BNN2', or 'ensemble'
  
