@@ -24,6 +24,8 @@ run the following command:
     
  ## run eval
  
+ After calculating the adversarial examples, the evaluation on the uncertainty features can be called via:
+ 
      docker run --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0 \
             --rm \
             -v <path-to-repo>/src:/root/asr-python/src \
