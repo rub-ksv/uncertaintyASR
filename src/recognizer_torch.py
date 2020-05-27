@@ -64,10 +64,10 @@ ROOT_DIR = 'root/asr-python'
 
 NUM_TRAIN = 8623
 NUM_TEST = 1000
-NUM_ADV = 100
+NUM_ADV = 1000
 
 
-EPS_LIST = np.arange(0.0, .101, 0.01) # [0.05] [0.02] # 
+EPS_LIST = [0.05] # np.arange(0.0, .101, 0.01) # [0.02]
 
 if len(EPS_LIST) == 1:
     EPS_STR = f'{EPS_LIST[0]}'
