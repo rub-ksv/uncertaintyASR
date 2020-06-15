@@ -14,7 +14,7 @@ RUN apt install -y python-pip python3-pip \
 
 COPY src /root/asr-python/src
 COPY montreal-forced-aligner /root/asr-python/montreal-forced-aligner
-COPY dict /root/asr-python/digits.dict
+COPY digits.dict /root/asr-python/digits.dict
 
 # fix montreal forced aligner issue
 RUN apt install -y libgfortran3:amd64
